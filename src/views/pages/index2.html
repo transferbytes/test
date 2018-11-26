@@ -1,0 +1,13 @@
+{% extends "pages/template.html" %}
+    {% block content %}
+        <div class="container index">
+            <div class="index__oompas">
+                aoy index 2
+            <div>
+                {% for data in lollys %}
+                {{ data.titlePost }}
+                {% endfor %}
+            </div>
+            </div>
+        </div>
+    {% endblock %}
