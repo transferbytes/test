@@ -18,7 +18,7 @@ class ExampleController2 {
           idPost: 0
         });
 
-        res.render('pages/index.html', {lollys: data2});
+        res.render('pages/template.html', {lollys: data2});
       } catch (error) {
         console.error(error);
       }
