@@ -16,9 +16,9 @@
 
 <body>
     <div id="nuevoemail">
-        <div v-bind:class="{ active: isMailActive }">
-            <span class="logo"><img src="img/logo.jpg"></span>
+        <span class="logo"><img src="img/logo.jpg"></span>
 
+        <div v-bind:class="{ active: isMailActive }">
             <h3><% titulo %></h3>
             <span class="claim" v-html="texto"></span>
 
@@ -32,8 +32,8 @@
         </div>
 
         <div v-bind:class="{ active: isDownloadActive }" class="download">
-            <a class="button" v-bind:href="href" target="_blank"><button v-on:click="downloadBook">Ver Ebook</button></a>
-            <span class=""><% sms %></span>
+            <a class="button" v-bind:href="link" target="_blank"><button v-on:click="downloadBook">Ver Ebook</button></a>
+            <span class="successSms"><% sms %></span>
         </div>
     </div>
 

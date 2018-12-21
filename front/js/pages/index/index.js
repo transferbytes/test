@@ -15,7 +15,8 @@ new Vue({
         href: '',
         texto: '',
         legal: '',
-        titulo: ''
+        titulo: '',
+        link: ''
     },
     delimiters: ["<%","%>"],
     methods: {
@@ -34,6 +35,7 @@ new Vue({
                 }).then((result) => {
                     this.isDownloadActive = false;
                     this.isMailActive = true;
+                    this.link = this.href;
                     this.emailPost();
                 });
             } else {
