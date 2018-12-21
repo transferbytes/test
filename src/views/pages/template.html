@@ -17,8 +17,10 @@
 <body>
     <div id="nuevoemail">
         <div v-bind:class="{ active: isMailActive }">
+            <span class="logo"><img src="img/logo.jpg"></span>
+
             <h3><% titulo %></h3>
-            <span v-html="texto"></span>
+            <span class="claim" v-html="texto"></span>
 
             <label><strong>Nombre</strong></label>
             <input v-model="info_name" type="text" required placeholder="Tu nombre">
@@ -26,12 +28,12 @@
             <input v-model="info_email" type="email" required placeholder="Introduce tu email...">
             <span class="error"><% sms %></span>
             <span class="button"><button v-on:click="verifyEmail">Obtener Ebook!</button></span>
-            <small><% legal %></small>
+            <small class="legal"><% legal %></small>
         </div>
 
-        <div v-bind:class="{ active: isDownloadActive }">
+        <div v-bind:class="{ active: isDownloadActive }" class="download">
             <a class="button" v-bind:href="href" target="_blank"><button v-on:click="downloadBook">Ver Ebook</button></a>
-            <span class="error"><% sms %></span>
+            <span class=""><% sms %></span>
         </div>
     </div>
 
